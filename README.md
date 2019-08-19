@@ -5,6 +5,10 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/andybega/abmisc.svg?branch=master)](https://travis-ci.org/andybega/abmisc)
+[![Codecov test
+coverage](https://codecov.io/gh/andybega/abmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/andybega/abmisc?branch=master)
 <!-- badges: end -->
 
 Various functions that don’t fit elsewhere.
