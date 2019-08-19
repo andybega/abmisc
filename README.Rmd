@@ -1,0 +1,39 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# abmisc
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Various functions that don't fit elsewhere. 
+
+## Installation
+
+``` r
+library("remotes")
+install_github("andybega/abmisc")
+```
+
+## Example
+
+Fix dates in CSV files that have been touched by Excel:
+
+```{r}
+library("abmisc")
+
+x <- c("1/20/53", "1890-01-23", "12/1/53", "1/12/53", "1/1/09")
+data.frame(input = x, output = fix_csv_excel_dates(x), stringsAsFactors = FALSE)
+```
+
