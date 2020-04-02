@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/andybega/abmisc.svg?branch=master)](https://travis-ci.org/andybega/abmisc)
+status](https://travis-ci.com/andybega/abmisc.svg?branch=master)](https://travis-ci.com/andybega/abmisc)
 [![Codecov test
 coverage](https://codecov.io/gh/andybega/abmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/andybega/abmisc?branch=master)
 <!-- badges: end -->
@@ -25,7 +25,7 @@ install_github("andybega/abmisc")
 Fix dates in CSV files that have been touched by Excel:
 
 ``` r
-library("abmisc")
+library(abmisc)
 
 x <- c("1/20/53", "1890-01-23", "12/1/53", "1/12/53", "1/1/09")
 data.frame(input = x, output = fix_csv_excel_dates(x), stringsAsFactors = FALSE)
