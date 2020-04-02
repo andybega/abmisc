@@ -19,7 +19,8 @@
 #' @export
 find_packages <- function(path = "./") {
 
-  code_files <- dir("./", recursive = TRUE, pattern = "\\.(R|r)(md)?$")
+  code_files <- dir(path, recursive = TRUE, pattern = "\\.(R|r)(md)?$",
+                    full.names = TRUE)
   packs <- lapply(code_files, function(x) {
     x <- readLines(x)
     r <- stringr::str_extract(x, "(library|require)\\(\"?[:alnum:]+\"?\\)")
@@ -27,7 +28,7 @@ find_packages <- function(path = "./") {
   })
 
   packs <- unlist(packs)
-  packs <- str_replace(packs, "library\\(\"?([:alnum:]+)\"?\\)", "\\1")
+  packs <- stringr::str_replace(packs, "(library|require)\\(\"?([:alnum:]+)\"?\\)", "\\2")
   packs <- sort(unique(packs))
   packs
 
