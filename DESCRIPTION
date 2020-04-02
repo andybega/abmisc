@@ -1,6 +1,6 @@
 Package: abmisc
 Title: Miscellaneous stuff that doesn't fit elsewhere
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person(given = "Andreas",
            family = "Beger",
@@ -11,6 +11,8 @@ Description: Collection of miscellaneous functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 Suggests: 
     covr
+Imports: 
+    stringr
