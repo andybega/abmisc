@@ -5,10 +5,9 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/andybega/abmisc.svg?branch=master)](https://travis-ci.com/andybega/abmisc)
+[![R-CMD-check](https://github.com/andybega/abmisc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/andybega/abmisc/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/andybega/abmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/andybega/abmisc?branch=master)
+coverage](https://codecov.io/gh/andybega/abmisc/branch/master/graph/badge.svg)](https://app.codecov.io/gh/andybega/abmisc?branch=master)
 <!-- badges: end -->
 
 Various functions that don’t fit elsewhere.

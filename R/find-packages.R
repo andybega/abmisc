@@ -18,9 +18,13 @@
 #' }
 #' @export
 find_packages <- function(path = "./") {
-
-  code_files <- dir(path, recursive = TRUE, pattern = "\\.(R|r)(md)?$",
-                    full.names = TRUE)
+  # is path a file or directory?
+  file <- !dir.exists(path)
+  if (file) code_files <- path
+  if (!file) {
+    code_files <- dir(path, recursive = TRUE, pattern = "\\.(R|r)(md)?$",
+                      full.names = TRUE)
+  }
   packs <- lapply(code_files, function(x) {
     x <- readLines(x)
     r <- stringr::str_extract(x, "(library|require)\\(\"?[:alnum:]+\"?\\)")
